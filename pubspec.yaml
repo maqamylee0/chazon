@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   device_preview: ^1.1.0
   flutter_svg: ^1.1.6
+  cupertino_tabbar: ^2.0.0
+  email_validator: ^2.1.17
 
 dev_dependencies:
   flutter_test:
