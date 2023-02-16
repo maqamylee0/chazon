@@ -2,7 +2,6 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../../palette/palette.dart';
 
 class LoginTemplate extends StatefulWidget {
@@ -53,11 +52,11 @@ class _LoginTemplateState extends State<LoginTemplate> {
                       labelText: 'Username',
                       hintText: 'John Doe',
                       // Here is key idea
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.person_outline),
-                        color: Colors.grey,
-                        onPressed: () {},
-                      ),
+                      // suffixIcon: IconButton(
+                      //   icon: Icon(Icons.person_outline),
+                      //   color: Colors.grey,
+                      //   onPressed: () {},
+                      // ),
                     ),
                   ),
                 ),
@@ -87,11 +86,11 @@ class _LoginTemplateState extends State<LoginTemplate> {
                       labelText: 'Email Address',
                       hintText: 'johndoe@gmail.com',
                       // Here is key idea
-                      suffixIcon: IconButton(
-                        icon: const Icon(Icons.person_outline),
-                        color: Colors.grey,
-                        onPressed: () {},
-                      ),
+                      // suffixIcon: IconButton(
+                      //   icon: const Icon(Icons.person_outline),
+                      //   color: Colors.grey,
+                      //   onPressed: () {},
+                      // ),
                     ),
                   ),
                 ),

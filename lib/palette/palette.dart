@@ -6,5 +6,5 @@ class Palette{
    static const Color scaffold = Color(0xFFEDEDED);
    static const Color chazonBlue = Color(0xFF01008C);
    static const Color chazonBlueLess = Color(0xFFADD9E4);
-
+    static const Color chazonBlueDark = Color(0xFF01006F);
 }

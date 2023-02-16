@@ -5,10 +5,10 @@ import 'features/pageImports.dart';
 
 void main() {
   runApp(
-      // DevicePreview(
-      //   builder: (context) => const MyApp()),
-      // );
-      const MyApp());
+      DevicePreview(
+        builder: (context) => const MyApp()),
+      );
+      // const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         ),
         // primarySwatch: Palette.chazonBlue,
       ),
-      home: SignUpPage() ,
+      home: DashboardPage() ,
     );
   }
 }
