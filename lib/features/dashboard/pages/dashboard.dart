@@ -13,7 +13,7 @@ class _DashboardPageState extends State<DashboardPage> {
   int pageIndex = 0;
 
   final pages = [
-    const HomePage(),
+     HomePage(),
     const CategoryPage(),
 
   ];
