@@ -1,6 +1,7 @@
 import 'package:chazon/features/pageImports.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({Key? key}) : super(key: key);
@@ -8,14 +9,14 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String>  items =[
-      'assets/Vector.png',
-      'assets/Vector1.png',
-      'assets/Vector2.png',
-      'assets/Vector3.png',
-      'assets/Vector4.png',
-      'assets/Vector5.png',
-      'assets/Vector.png',
-      'assets/Vector.png'];
+      'Vector4.svg',
+      'Vector.svg',
+      'Vector1.svg',
+      'Vector2.svg',
+      'Vector4.svg',
+      'Vector3.svg',
+      'Vector.svg',
+      'Vector.svg'];
     List<String>  items2 =[
       'AUTOMOBILES',
       'HOME ACCESSORIES',
@@ -53,7 +54,7 @@ class CategoryPage extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(items[index]),
+                  SvgPicture.asset(items[index]),
                   SizedBox(height: 10,),
                   Text(items2[index])
                 ],

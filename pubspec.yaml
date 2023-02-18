@@ -40,7 +40,8 @@ dependencies:
   flutter_svg: ^1.1.6
   cupertino_tabbar: ^2.0.0
   email_validator: ^2.1.17
-
+  carousel_slider: ^4.2.1
+  scrolling_page_indicator: ^0.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

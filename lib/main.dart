@@ -1,3 +1,4 @@
+import 'package:chazon/features/product_detail/pages/expand_product.dart';
 import 'package:chazon/palette/palette.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         // primarySwatch: Palette.chazonBlue,
       ),
-      home: DashboardPage() ,
+      home: WalletPage() ,
     );
   }
 }
