@@ -1,4 +1,4 @@
-export './auth/signup/pages/signUpPage.dart';
+export './auth/pages/signup/pages/signUpPage.dart';
 // export './auth/login/pages/signUpPage.dart';
 export './widgets/header.dart';
 export './widgets/header_back.dart';

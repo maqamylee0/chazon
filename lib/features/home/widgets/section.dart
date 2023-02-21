@@ -1,3 +1,4 @@
+import 'package:chazon/features/product_detail/pages/expand_product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:chazon/features/pageImports.dart';
@@ -15,80 +16,89 @@ class Section extends StatelessWidget {
         Container(
 
           color: Palette.scaffold,
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
           margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
-          height: 250,
+          height: 200,
           child: Column(
             children: [
               Row(
 
                 children: [
-                  SvgPicture.asset('Vector4.svg',color: Color(0xFF3E4347), height: 30,width: 30,),
+                  Container(
+                    padding:EdgeInsets.fromLTRB(15, 0, 0, 0),
+                      child: SvgPicture.asset('assets/Vector4.svg',color: Color(0xFF3E4347), height: 20,width: 20,)),
                   //Icon(Icons.car_rental,size: 40,)
-                  SizedBox(width: 20,),
-                  Text('AUTOMOBILES')],
+                  SizedBox(width: 10,),
+                  Text('AUTOMOBILES',style: TextStyle(fontSize: 14),)],
               ),
-              Container(
-                height: 200,
+              SizedBox(
+                height: 170,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 4,
                     itemBuilder: (BuildContext context, index) {
-                      return Container(
-                        margin: EdgeInsets.all(10),
-                        width: 145,
-                          height: 140,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                                image:  DecorationImage(
-                                    image: AssetImage("car.jpeg"),
-                                    fit: BoxFit.fitHeight),
-                              border: Border.all(
-                                  color: Palette.scaffoldBorder, width: 2.5)),
-                          // color: Colors.amberAccent,
-                          child: Column(
-                            // crossAxisAlignment: CrossAxisAlignment.,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                      return GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  ExpandProductPage()),
+                          );                        },
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          width: 140,
+                            // height: 140,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                  image:  DecorationImage(
+                                      image: AssetImage("assets/car.jpeg"),
+                                      fit: BoxFit.fitHeight),
+                                border: Border.all(
+                                    color: Palette.scaffoldBorder, width: 2.5)),
+                            // color: Colors.amberAccent,
+                            child: Column(
+                              // crossAxisAlignment: CrossAxisAlignment.,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
 
-                              SizedBox(
-                                height: 105,
-                              ),
-                              Container(
-                                alignment: Alignment.bottomCenter,
-                                  width: 145,
-                                  height: 140/2,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(16),
-
-                                    gradient:
-
-                                    const LinearGradient(
-
-                                    begin: Alignment.bottomRight,
-                                      end: Alignment.topRight,
-                                      colors: [
-                                        Colors.white,
-                                        // Colors.white70,
-                                        Colors.white70,
-                                        Colors.transparent
-                                      ]
-
-                                  )
+                                SizedBox(
+                                  height: 75,
                                 ),
-                                  child: Column(
+                                Container(
+                                  alignment: Alignment.bottomCenter,
+                                    width: 145,
+                                    height: 140/2,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16),
 
-                                    children: [
-                                      SizedBox(height: 30,),
-                                      Text('2022 MUSTANG',),
-                                      Text('UGX 190,000,000',style: TextStyle(fontSize: 16,
-                                        color: Color(0xFF3E4347),fontWeight: FontWeight.w600
-                                      ),)
-                                    ],
-                                  )
-                              )
-                            ],
-                          ));
+                                      gradient:
+
+                                      const LinearGradient(
+
+                                      begin: Alignment.bottomRight,
+                                        end: Alignment.topRight,
+                                        colors: [
+                                          Colors.white,
+                                          // Colors.white70,
+                                          Colors.white70,
+                                          Colors.transparent
+                                        ]
+
+                                    )
+                                  ),
+                                    child: Column(
+
+                                      children: [
+                                        SizedBox(height: 30,),
+                                        Text('2022 MUSTANG',),
+                                        Text('UGX 190,000,000',style: TextStyle(fontSize: 14,
+                                          color: Color(0xFF3E4347),fontWeight: FontWeight.w600
+                                        ),)
+                                      ],
+                                    )
+                                )
+                              ],
+                            )),
+                      );
                     }),
               ),
             ],

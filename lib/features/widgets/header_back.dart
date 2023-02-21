@@ -22,10 +22,16 @@ class HeaderBack extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-                height: 43,
+                height: 45,
                 width: 43,
-                child: Icon(Icons.arrow_back,size: 40,color: Colors.white,)),
-            Icon(Icons.menu_rounded,color: Colors.white,size: 40,)
+                child:IconButton(
+                  icon: Icon(Icons.arrow_back,size: 35,color: Colors.white,),
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                )
+                ),
+                 Icon(Icons.menu_rounded,color: Colors.white,size: 40,)
           ],
         ),
       ),

@@ -42,17 +42,30 @@ dependencies:
   email_validator: ^2.1.17
   carousel_slider: ^4.2.1
   scrolling_page_indicator: ^0.1.2
+  ar_flutter_plugin: ^0.7.3
+  firebase_core: ^2.6.1
+  cloud_firestore: ^4.1.0
+  firebase_auth:
+  fluttertoast:
+  open_mail_app: ^0.4.5
+  flutter_launcher_icons: ^0.11.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logoblu1.png"
+  min_sdk_android: 24
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-
+  json_serializable: ^6.6.1
+  build_runner:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

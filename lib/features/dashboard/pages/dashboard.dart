@@ -52,7 +52,7 @@ class _DashboardPageState extends State<DashboardPage> {
                    borderRadius: BorderRadius.circular(16),
                    color: pageIndex == 0 ? Palette.chazonBlueDark : Palette.chazonBlue
                  ),
-                 width: MediaQuery.of(context).size.width*0.15,
+                 width: MediaQuery.of(context).size.width*0.3,
                  child: IconButton(
                    icon:Icon(Icons.home,color: Colors.white,size: pageIndex == 0 ? 35 : 25,), onPressed: () {
                      setState(() {
@@ -64,7 +64,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
                  Container(
                    height: 70,
-                   width: MediaQuery.of(context).size.width*0.15,
+                   width: MediaQuery.of(context).size.width*0.3,
                    decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     color: pageIndex == 1 ? Palette.chazonBlueDark : Palette.chazonBlue

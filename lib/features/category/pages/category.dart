@@ -9,14 +9,14 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String>  items =[
-      'Vector4.svg',
-      'Vector.svg',
-      'Vector1.svg',
-      'Vector2.svg',
-      'Vector4.svg',
-      'Vector3.svg',
-      'Vector.svg',
-      'Vector.svg'];
+      'assets/Vector4.svg',
+      'assets/Vector.svg',
+      'assets/Vector1.svg',
+      'assets/Vector2.svg',
+      'assets/Vector4.svg',
+      'assets/Vector3.svg',
+      'assets/Vector.svg',
+      'assets/Vector.svg'];
     List<String>  items2 =[
       'AUTOMOBILES',
       'HOME ACCESSORIES',
@@ -56,7 +56,7 @@ class CategoryPage extends StatelessWidget {
                 children: [
                   SvgPicture.asset(items[index]),
                   SizedBox(height: 10,),
-                  Text(items2[index])
+                  Text(items2[index],style: TextStyle(fontSize: 10),)
                 ],
               ))),
         );
