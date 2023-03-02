@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:chazon/features/product_detail/pages/ar_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:chazon/features/pageImports.dart';
 import 'package:flutter/material.dart';
@@ -136,19 +137,24 @@ class _ExpandProductPageState extends State<ExpandProductPage> {
                   height: 100,
                   child: Row(
                     children: [
-                           Container(
-                             height: 50,
-                             width:170,
-                             padding: EdgeInsets.all(5),
-                             decoration: BoxDecoration(
-                                 borderRadius: BorderRadius.circular(15),
-                                 color: Palette.scaffold
-                             ),
-                             child: Row(
-                               children: [
-                                 SvgPicture.asset('assets/glasses.svg'),SizedBox(width: 5,),
-                                 Text('View in VR or AR',style: TextStyle(fontSize: 12),)
-                               ],
+                           GestureDetector(
+                             onTap:(){
+                                 Navigator.push(context,MaterialPageRoute(builder: (context)=>ARViewPage()));
+                                    },
+                             child: Container(
+                               height: 50,
+                               width:170,
+                               padding: EdgeInsets.all(5),
+                               decoration: BoxDecoration(
+                                   borderRadius: BorderRadius.circular(15),
+                                   color: Palette.scaffold
+                               ),
+                               child: Row(
+                                 children: [
+                                   SvgPicture.asset('assets/glasses.svg'),SizedBox(width: 5,),
+                                   Text('View in VR or AR',style: TextStyle(fontSize: 12),)
+                                 ],
+                               ),
                              ),
                            ),
                       SizedBox(width: 10,),

@@ -75,8 +75,9 @@ class AuthService{
     // await prefs.setString('userid', '${user!.uid}');
     // await prefs.setString('username', '${users.name}');
     // await prefs.setString('photoUrl', '${user!.photoURL}');
+    Navigator.pop(context);
 
-    Navigator.push(
+    Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) =>  VerifyOne())
 
@@ -98,12 +99,23 @@ class AuthService{
         builder: (context) => const Center(child: CircularProgressIndicator()));
     try{
       await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.trim(), password:password.trim());
+        if(FirebaseAuth.instance.currentUser?.emailVerified == true){
+          Navigator.pop(context);
 
-      Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) =>  DashboardPage())
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) =>  DashboardPage())
 
-      );
+          );
+        }else{
+          Navigator.pop(context);
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) =>  VerifyOne())
+
+          );
+        }
+
     } on FirebaseException catch(e){
       // navigatorKey.currentState!.popUntil((route)=>route.isFirst);
       Navigator.pop(context);
