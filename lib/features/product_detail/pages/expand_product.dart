@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:chazon/features/pageImports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:scrolling_page_indicator/scrolling_page_indicator.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ExpandProductPage extends StatefulWidget {
    ExpandProductPage({Key? key}) : super(key: key);
@@ -96,17 +96,32 @@ class _ExpandProductPageState extends State<ExpandProductPage> {
                     ),
 
                   SizedBox(height: 10,),
-                  ScrollingPageIndicator(
-                    dotColor: Colors.grey,
-                    dotSelectedColor: Palette.chazonBlue,
-                    dotSize: 8,
-                    dotSelectedSize: 10,
-                    dotSpacing: 12,
-                    controller: _controller,
-                    itemCount: imgList.length,
-                    orientation: Axis.horizontal,
+                  // ScrollingPageIndicator(
+                  //   dotColor: Colors.grey,
+                  //   dotSelectedColor: Palette.chazonBlue,
+                  //   dotSize: 8,
+                  //   dotSelectedSize: 10,
+                  //   dotSpacing: 12,
+                  //   controller: _controller,
+                  //   itemCount: imgList.length,
+                  //   orientation: Axis.horizontal,
+                  // ),
+                SmoothPageIndicator(
+                  controller: _controller,
+                  count:  imgList.length,
+                  axisDirection: Axis.horizontal,
+                  effect:  SlideEffect(
+                      spacing:  8.0,
+                      radius:  4.0,
+                      dotWidth:  14.0,
+                      dotHeight:  14.0,
+                      paintStyle:  PaintingStyle.stroke,
+                      strokeWidth:  1.5,
+                      dotColor:  Colors.grey,
+                      activeDotColor:  Palette.chazonBlue
                   ),
-                  SizedBox(height: 10,),
+                ),
+                SizedBox(height: 10,),
                   Container(
                     padding: EdgeInsets.all(20),
                     decoration:  BoxDecoration(

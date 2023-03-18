@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: '>=2.12.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -41,7 +41,7 @@ dependencies:
   cupertino_tabbar: ^2.0.0
   email_validator: ^2.1.17
   carousel_slider: ^4.2.1
-  scrolling_page_indicator: ^0.1.2
+#  scrolling_page_indicator:
   ar_flutter_plugin: ^0.7.3
   firebase_core: ^2.6.1
   cloud_firestore: ^4.1.0
@@ -49,7 +49,7 @@ dependencies:
   fluttertoast:
   open_mail_app: ^0.4.5
   flutter_launcher_icons: ^0.11.0
-
+  smooth_page_indicator:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -80,6 +80,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/
+     - assets/mods/rover.gltf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -7,6 +7,7 @@ import 'package:ar_flutter_plugin/models/ar_node.dart';
 import 'package:ar_flutter_plugin/widgets/ar_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vector_math/vector_math_64.dart' as vector;
 
 class ARViewPage extends StatefulWidget {
   const ARViewPage({Key? key}) : super(key: key);
@@ -57,15 +58,20 @@ class _ARViewPageState extends State<ARViewPage> {
       localObjectNode = null;
     } else {
       // 2
+      print("Beforeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
       var newNode = ARNode(
           type: NodeType.localGLTF2,
-          uri: "assets/mods/rover.glb",
-          // scale: Vector3(0.2, 0.2, 0.2),
-          // position: Vector3(0.0, 0.0, 0.0),
-          // rotation: Vector4(1.0, 0.0, 0.0, 0.0)
+          // uri: "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf",
+          //  uri:"https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF-Binary/Duck.glb",
+          uri: "assets/mods/rover.gltf",
+          scale: vector.Vector3(0.2, 0.2, 0.2),
+          position: vector.Vector3(0.0, 0.0, 0.0),
+          rotation: vector.Vector4(1.0, 0.0, 0.0, 0.0)
           );
       // 3
       bool? didAddLocalNode = await arObjectManager.addNode(newNode);
+      print("Aftereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+
       localObjectNode = (didAddLocalNode!) ? newNode : null;
     }
   }
